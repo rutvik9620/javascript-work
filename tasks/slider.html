@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        .slide {
+            width: 90%;
+            height: 600px;
+            object-fit: cover;
+            margin: 10px auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="image/img1(1).jpg" alt="" class="slide">
+        <img src="image/img1(2).jpg" alt="" class="slide">
+        <img src="image/img1(3).jpg" alt="" class="slide">
+        <img src="image/img1(4).jpg" alt="" class="slide">
+        <img src="image/img1(5).jpg" alt="" class="slide">
+        <img src="image/img1(6).jpg" alt="" class="slide">
+        <img src="image/img1(7).jpg" alt="" class="slide">
+        <img src="image/img1(8).jpg" alt="" class="slide">
+        <img src="image/img1(9).jpg" alt="" class="slide">
+    </div>
+    <center>
+        <button onclick="prev()">PREV</button>
+        <button onclick="next()">NEXT</button>
+    </center>
+
+
+
+    <script>
+        count=0;
+        window.onload = function()
+        {
+            slider()
+        }
+
+        function slider() 
+        {
+            var img = document.getElementsByClassName('slide')
+
+            for (i = 0; i < img.length; i++) 
+            {
+                img[i].style.display='none'
+            }
+
+            if(count==img.length)
+            {
+                count=0;
+            }
+            
+            if(count < 0)
+            {
+                count=img.length-1;
+            }
+            
+            img[count].style.display='block'
+
+        }
+
+        function next()
+        {
+            count++;
+            slider()
+        }
+        function prev()
+        {           
+            count--; 
+            slider()
+        }
+
+    </script>
+</body>
+
+</html>

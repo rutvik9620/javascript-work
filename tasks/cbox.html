@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECK_BOX</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: lightgray;
+        }
+
+        .main {
+            height: 100vh;
+        }
+
+        .lain {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .cbox {
+            width: 30px;
+            height: 30px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="lain">
+            <input type="checkbox" id="cb1" class="cbox" name="check" onclick="clc1()">
+            <input type="checkbox" id="cb2" class="cbox" name="check" onclick="clc(1)">
+            <input type="checkbox" id="cb3" class="cbox" name="check" onclick="clc(2)">
+            <input type="checkbox" id="cb4" class="cbox" name="check" onclick="clc(3)">
+            <input type="checkbox" id="cb5" class="cbox" name="check" onclick="clc(4)">
+            <input type="checkbox" id="cb6" class="cbox" name="check" onclick="clc(5)">
+            <input type="checkbox" id="cb7" class="cbox" name="check" onclick="clc(6)">
+            <input type="checkbox" id="cb8" class="cbox" name="check" onclick="clc(7)">
+            <input type="checkbox" id="cb9" class="cbox" name="check" onclick="clc(8)">
+            <input type="checkbox" id="cb10" class="cbox" name="check" onclick="clc(9)">
+        </div>
+        <div class="lain">
+            <input type="checkbox" id="cb1" class="cbox" onclick="clc2(10)">
+            <input type="checkbox" id="cb2" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb3" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb4" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb5" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb6" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb7" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb8" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb9" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb10" class="cbox" onclick="clc()">
+        </div>
+        <div class="lain">
+            <input type="checkbox" id="cb1" class="cbox" onclick="clc2(20)">
+            <input type="checkbox" id="cb2" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb3" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb4" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb5" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb6" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb7" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb8" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb9" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb10" class="cbox" onclick="clc()">
+        </div>
+        <div class="lain">
+            <input type="checkbox" id="cb1" class="cbox" onclick="clc2(30)">
+            <input type="checkbox" id="cb2" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb3" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb4" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb5" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb6" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb7" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb8" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb9" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb10" class="cbox" onclick="clc()">
+        </div>
+        <div class="lain">
+            <input type="checkbox" id="cb1" class="cbox" onclick="clc2(40)">
+            <input type="checkbox" id="cb2" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb3" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb4" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb5" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb6" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb7" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb8" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb9" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb10" class="cbox" onclick="clc()">
+        </div>
+        <div class="lain">
+            <input type="checkbox" id="cb1" class="cbox" onclick="clc2(50)">
+            <input type="checkbox" id="cb2" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb3" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb4" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb5" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb6" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb7" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb8" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb9" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb10" class="cbox" onclick="clc()">
+        </div>
+        <div class="lain">
+            <input type="checkbox" id="cb1" class="cbox" onclick="clc2(60)">
+            <input type="checkbox" id="cb2" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb3" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb4" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb5" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb6" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb7" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb8" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb9" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb10" class="cbox" onclick="clc()">
+        </div>
+        <div class="lain">
+            <input type="checkbox" id="cb1" class="cbox" onclick="clc2(70)">
+            <input type="checkbox" id="cb2" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb3" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb4" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb5" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb6" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb7" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb8" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb9" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb10" class="cbox" onclick="clc()">
+        </div>
+        <div class="lain">
+            <input type="checkbox" id="cb1" class="cbox" onclick="clc2(80)">
+            <input type="checkbox" id="cb2" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb3" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb4" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb5" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb6" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb7" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb8" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb9" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb10" class="cbox" onclick="clc()">
+        </div>
+        <div class="lain">
+            <input type="checkbox" id="cb1" class="cbox" onclick="clc2(90)">
+            <input type="checkbox" id="cb2" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb3" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb4" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb5" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb6" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb7" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb8" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb9" class="cbox" onclick="clc()">
+            <input type="checkbox" id="cb10" class="cbox" onclick="clc()">
+        </div>
+        
+    </div>
+
+
+
+
+    <script>
+        
+        function get()  
+        {
+            c1 = document.getElementsByClassName("cbox")
+            ok = document.getElementsByName('check')
+        }
+
+            
+        function clc1() {
+            get()
+            if (c1[0].checked == true) {
+                for (i = 0; i < c1.length; i++) {
+                     c1[i].checked = true
+                }
+            }
+            else
+            {
+                for (i = 0; i < c1.length; i++) {
+                     c1[i].checked = false
+                }
+            }
+        }
+
+        
+        function clc(a) {
+            get()
+            if (c1[a].checked == true) {
+                for (i = a; i < c1.length; i++) {
+                     c1[i].checked = true
+                     i=i+9
+                }
+            }
+            else
+            {
+                for (i = a; i < c1.length; i++) {
+                     c1[i].checked = false
+                     i=i+9
+                }
+            }
+        }
+
+        function clc2(r) {
+            get()
+            b=0
+            if (c1[r].checked == true) {
+                for (i = r; b < ok.length ; i++) {
+                     c1[i].checked = true
+                     b++
+                }
+            }
+            else
+            {
+                for (i = r; b<ok.length ; i++) {
+                     c1[i].checked = false
+                     b++
+                }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

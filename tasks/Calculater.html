@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATER</title>
+
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(image/meet6.jpg);
+            background-size: cover;
+        }
+
+        .bg-main {
+            height: 520px;
+            width: 360px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: auto;
+            margin-top: 100px;
+            border-radius: 30px;
+        }
+
+        .display input {
+            height: 60px;
+            width: 83%;
+            border-radius: 15px;
+            border: 0;
+            display: block;
+            margin: auto;
+            text-align: right;
+            font-size: 36px;
+            font-weight: 500;
+            padding: 0 10px;
+            background-color: rgb(250, 120, 73);
+            box-shadow: 2px 2px 4px black;
+            color: white;
+        }
+
+        .display {
+            padding: 33px 0;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 19px 10px;
+        }
+
+        .btn {
+            padding: 10px 28px;
+            font-size: 30px;
+            font-weight: 500;
+            border-radius: 20px;
+            border: 0;
+            box-shadow: 2px 2px 4px black;
+        }
+
+        .btn-c {
+            padding: 10px 28px;
+            font-size: 30px;
+            font-weight: 500;
+            border-radius: 20px;
+            border: 0;
+            background-color: rgb(234, 103, 56);
+            color: white;
+            box-shadow: 2px 2px 4px black;
+        }
+
+        .btn-equal {
+            width: 93%;
+            padding: 10px 28px;
+            font-size: 30px;
+            font-weight: 500;
+            border-radius: 20px;
+            border: 0;
+            background-color: rgb(234, 103, 56);
+            color: white;
+            box-shadow: 2px 2px 4px black;
+        }
+
+        ::placeholder {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-main">
+        <div class="display">
+            <input type="text" placeholder="0" id="disp" disabled >
+        </div>
+        <div class="main">
+            <div class="buttons">
+                <input class="btn" type="button" onclick="clc('7')" value="7">
+                <input class="btn" type="button" onclick="clc('8')" value="8">
+                <input class="btn" type="button" onclick="clc('9')" value="9">
+                <!-- <input class="btn" type="button" onclick="sign('/')" value="/"> -->
+                <input class="btn" type="button" onclick="clc('/')" value="/">
+            </div>
+            <div class="buttons">
+                <input class="btn" type="button" onclick="clc('4')" value="4">
+                <input class="btn" type="button" onclick="clc('5')" value="5">
+                <input class="btn" type="button" onclick="clc('6')" value="6">
+                <!-- <input class="btn" type="button" onclick="sign('*')" value="*"> -->
+                <input class="btn" type="button" onclick="clc('*')" value="*">
+            </div>
+            <div class="buttons">
+                <input class="btn" type="button" onclick="clc('1')" value="1">
+                <input class="btn" type="button" onclick="clc('2')" value="2">
+                <input class="btn" type="button" onclick="clc('3')" value="3">
+                <!-- <input class="btn" type="button" onclick="sign('-')" value="-"> -->
+                <input class="btn" type="button" onclick="clc('-')" value="-">
+            </div>
+            <div class="buttons">
+                <input class="btn" type="button" onclick="clc('0')" value="0">
+                <input class="btn" type="button" onclick="clc('.')" value=".">
+                <!-- <input class="btn" type="button" onclick="sign('+')" value="+"> -->
+                <input class="btn" type="button" onclick="clc('+')" value="+">
+                <input class="btn-c" type="button" onclick="clc('c')" value="C">
+            </div>
+            <div class="buttons">
+                <input class="btn-equal" type="button" onclick="ans('=')" value="=">
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script>
+
+        var fval, sval, si;
+
+        // function clc(n) {
+        //     document.getElementById('disp').value = document.getElementById('disp').value + n;
+        //     if(n=='c')
+        //     {
+        //         document.getElementById('disp').value = ''
+        //     }
+        // }
+
+        // function sign(s) {
+        //     si = s
+        //     fval = document.getElementById('disp').value
+        //     document.getElementById('disp').value = ''
+        // }
+
+        // function ans(a) {
+        //     sval = document.getElementById('disp').value;
+        //     if (si == '+') 
+        //     {
+        //         result = parseInt(fval) + parseInt(sval)
+        //         document.getElementById('disp').value = result
+        //     }
+        //     if (si == '-') 
+        //     {
+        //         result = parseInt(fval) - parseInt(sval)
+        //         document.getElementById('disp').value = result
+        //     }
+        //     if (si == '*') 
+        //     {
+        //         result = parseInt(fval) * parseInt(sval)
+        //         document.getElementById('disp').value = result
+        //     }
+        //     if (si == '/') 
+        //     {
+        //         result = parseInt(fval) / parseInt(sval)
+        //         document.getElementById('disp').value = result
+        //     }
+        // }
+
+        function clc(n) {
+            document.getElementById('disp').value = document.getElementById('disp').value + n;
+            if(n=='c')
+            {
+                document.getElementById('disp').value = ''
+            }
+        }
+        function ans()
+        {
+            sval= document.getElementById('disp').value
+
+            document.getElementById('disp').value = eval(sval)
+        }
+
+    </script>
+</body>
+
+</html>

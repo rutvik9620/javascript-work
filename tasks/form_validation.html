@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM_VALIDATION</title>
+    <style>
+        table {
+            margin-top: 70px;
+            background-color: cornsilk;
+            color: rgb(0, 0, 0);
+        }
+
+        input {
+            background-color: cornsilk;
+            color: rgb(4, 4, 4);
+            border-color: rgb(66, 68, 70);
+            border: 0;
+        }
+        
+        ::placeholder {
+            color: rgb(160, 163, 165);
+        }
+
+        body {
+            /* background-color: antiquewhite; */
+            background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(image/meet6.jpg);
+            background-size: cover;
+        }
+
+        th {
+            text-align: right;
+        }
+        span{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="return  formsubmit()">
+        <table border="1" cellspacing="10" cellpadding="10" width="40%" align="center">
+            <tr>
+                <th>First Name : </th>
+                <td><input type="text" id="fname" placeholder="Enter First Name"><span id="fname_err">* Please enter name </span></td>
+            </tr>
+            <tr>
+                <th>Last Name : </th>
+                <td><input type="text" id="lname" placeholder="Enter Last Name"><span id="lname_err">* Please Enter Last Name </span></td>
+            </tr>
+            <tr>
+                <th>Email : </th>
+                <td><input type="text" id="email" placeholder="Enter Email"><span id="email_err">* Please enter valid email </span></td>
+            </tr>
+            <tr>
+                <th>Mo.Number : </th>
+                <td><input type="text" id="mnum" placeholder="Enter Mobile Number"></td>
+            </tr>
+            <tr>
+                <th>Gender : </th>
+                <td>
+                    <label><input type="radio" name="radio" value="male" id="radio">Male</label>
+                    <label><input type="radio" name="radio" value="female" id="radio">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <th>Hobby : </th>
+                <td>
+                    <input type="checkbox" name="cbox" id="cbox">Cricket<br>
+                    <input type="checkbox" name="cbox" id="cbox">Kabbdi<br>
+                    <input type="checkbox" name="cbox" id="cbox">Chess<br>
+                    <input type="checkbox" name="cbox" id="cbox">Other
+                </td>
+            </tr>
+            <tr>
+                <th>Password : </th>
+                <td><input type="password" name="pass" id="pass"></td>
+            </tr>
+            <tr>
+                <th>Address : </th>
+                <td><textarea name="txtarea" id="txtarea" cols="40" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>
+                    <button type="submit">SUBMIT</button>
+                    <button type="reset">RESET</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+    <script type="text/javascript">
+        function formsubmit() {
+            var fname = document.getElementById('fname').value
+            //alert(fname)
+            if (fname == '') {
+                //alert(': PLEASE ENTER FIRST NAME :')
+                //document.getElementById('fname').style.background='white'
+                //document.getElementById('fname').value='* Please enter name'
+                //document.getElementById('fname').style.color='red'
+                document.getElementById('fname_err').style.display='inline'
+                document.getElementById('fname_err').style.color='red'
+                return false
+            }
+            else{
+                document.getElementById('fname_err').style.display='none'
+            }
+
+
+            var lname = document.getElementById('lname').value
+            if (lname == '') {
+                //alert(': PLEASE ENTER LAST NAME :')
+                document.getElementById('lname_err').style.display='inline'
+                document.getElementById('lname_err').style.color='red'
+                return false
+            }
+            else{
+                document.getElementById('lname_err').style.display='none'
+            }
+
+
+            email=document.getElementById('email').value
+            mail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
+            if(mail.test(email)==false)
+            {
+                //alert(': ENTER VALID EMAIL :')
+                document.getElementById('email_err').style.display='inline'
+                document.getElementById('email_err').style.color='red'
+                return false
+            }
+            else{
+                document.getElementById('email_err').style.display='none'
+            }
+
+
+
+            mnum=document.getElementById('mnum').value
+            mo = /^[0-9]{10}$/;
+            if(mo.test(mnum)==false)
+            {
+                alert(': ENTER VALID NUMBER :')
+                return false
+            }
+
+
+
+            gender=document.getElementsByName('radio')
+            if(gender[0].checked==false && gender[1].checked==false)
+            {
+                alert(': SELECT YOUR GENDER :')
+                return false
+            }
+
+            
+
+            var count=0
+            hobby=document.getElementsByName('cbox')
+            for(i=0;i<hobby.length;i++)
+            {
+                if(hobby[i].checked==true)
+                {
+                    count++
+                }
+            }
+            if(count == 0)
+            {
+                alert(': PLEASE SELECT HOBBY :')
+                return false
+            }
+
+
+
+
+            pass=document.getElementById('pass').value
+            //alert(pass)
+            pw=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+            if(pw.test(pass)==false)
+            {
+                alert(': ENTER VALID PASSWORD :')
+                return false
+            }
+            
+            addr=document.getElementById('txtarea').value
+            adres=/[0-9\\\/# ,a-zA-Z]+[ ,]+[0-9\\\/#, a-zA-Z]{1,}/
+            if(adres.test(addr)==false)
+            {
+                alert(': ENTER VALID ADDRESS :')
+                return false
+            }
+        }
+    </script>
+</body>
+
+</html>

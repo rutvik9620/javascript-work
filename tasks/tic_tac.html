@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC_TAC</title>
+    <style>
+        body{
+            margin: 0;
+            background-image: url(image/px1-1.jpeg);
+            background-size: cover;
+        }
+        .main{
+            /* background-color: black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+        .btn{
+            height: 100px;
+            width: 100px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .btn1{
+            padding: 20px 30px;
+            font-size: 18px;
+            background-color: coral;
+            border: 0;
+            border-radius: 20px;
+            margin: 15px 5px;
+            cursor: pointer;
+        }
+        .btn2{
+            padding: 20px 30px;
+            font-size: 18px;
+            background-color: rgb(173, 202, 255);
+            border: 0;
+            border-radius: 20px;
+            margin: 15px 5px;
+            cursor: pointer;
+            font-size: 25px;
+            text-align: center;
+        }
+        .line{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="line">
+            <input type="button" value="" class="btn" id="buton1" onclick="val1(); win()">
+            <input type="button" value="" class="btn" id="buton2" onclick="val2(); win()">
+            <input type="button" value="" class="btn" id="buton3" onclick="val3(); win()">
+        </div>
+        <div class="line">
+            <input type="button" value="" class="btn" id="buton4" onclick="val4(); win()">
+            <input type="button" value="" class="btn" id="buton5" onclick="val5(); win()">
+            <input type="button" value="" class="btn" id="buton6" onclick="val6(); win()">
+        </div>
+        <div class="line">
+            <input type="button" value="" class="btn" id="buton7" onclick="val7(); win()">
+            <input type="button" value="" class="btn" id="buton8" onclick="val8(); win()">
+            <input type="button" value="" class="btn" id="buton9" onclick="val9(); win() ">
+        </div>
+        <div class="line">
+            <input type="button" value="RESET" class="btn1" onclick="reset()">
+        </div>
+        <!-- <div class="line">
+            <input type="text" value="" class="btn2" id='print' onclick="print()">
+        </div> -->
+    </div>
+
+
+
+    <script>
+    
+        a=1;
+        function value()
+        {
+            b1=document.getElementById('buton1').value
+            b2=document.getElementById('buton2').value
+            b3=document.getElementById('buton3').value
+            b4=document.getElementById('buton4').value
+            b5=document.getElementById('buton5').value
+            b6=document.getElementById('buton6').value
+            b7=document.getElementById('buton7').value
+            b8=document.getElementById('buton8').value
+            b9=document.getElementById('buton9').value
+        }
+        function val1()
+        {
+            if(a%2==1)
+            {
+                document.getElementById('buton1').value = 'X'
+                a++;
+            }
+            else{
+                document.getElementById('buton1').value = 'O'
+                a++;
+            }  
+        }
+
+        function val2()
+        {
+            if(a%2==1)
+            {
+                document.getElementById('buton2').value = 'X'
+                a++;
+            }
+            else{
+                document.getElementById('buton2').value = 'O'
+                a++;
+            }
+        }
+
+        function val3()
+        {
+            if(a%2==1)
+            {
+                document.getElementById('buton3').value = 'X'
+                a++;
+            }
+            else{
+                document.getElementById('buton3').value = 'O'
+                a++;
+            }
+        }
+
+        function val4()
+        {
+            if(a%2==1)
+            {
+                document.getElementById('buton4').value = 'X'
+                a++;
+            }
+            else{
+                document.getElementById('buton4').value = 'O'
+                a++;
+            }
+        }
+
+        function val5()
+        {
+            if(a%2==1)
+            {
+                document.getElementById('buton5').value = 'X'
+                a++;
+            }
+            else{
+                document.getElementById('buton5').value = 'O'
+                a++;
+            }
+        }
+
+        function val6()
+        {
+            if(a%2==1)
+            {
+                document.getElementById('buton6').value = 'X'
+                a++;
+            }
+            else{
+                document.getElementById('buton6').value = 'O'
+                a++;
+            }
+        }
+
+        function val7()
+        {
+            if(a%2==1)
+            {
+                document.getElementById('buton7').value = 'X'
+                a++;
+            }
+            else{
+                document.getElementById('buton7').value = 'O'
+                a++;
+            }
+        }
+
+        function val8()
+        {
+            if(a%2==1)
+            {
+                document.getElementById('buton8').value = 'X'
+                a++;
+            }
+            else{
+                document.getElementById('buton8').value = 'O'
+                a++;
+            }
+        }
+
+        function val9()
+        {
+            if(a%2==1)
+            {
+                document.getElementById('buton9').value = 'X'
+                a++;
+            }
+            else{
+                document.getElementById('buton9').value = 'O'
+                a++;
+            }
+        }
+
+
+
+        function reset() {
+            document.getElementById('buton1').value=''
+            document.getElementById('buton2').value=''
+            document.getElementById('buton3').value=''
+            document.getElementById('buton4').value=''
+            document.getElementById('buton5').value=''
+            document.getElementById('buton6').value=''
+            document.getElementById('buton7').value=''
+            document.getElementById('buton8').value=''
+            document.getElementById('buton9').value=''
+            document.getElementById('print').value=''
+            a=1;
+        }
+
+        function win()
+        {
+            value()
+            if (b1=='X'&&b2=='X'&&b3=='X') 
+            {
+                alert(': X IS WINNER :')
+                //document.getElementById('print').value='X IS WINNER'
+                location.reload()
+            }
+            if (b1=='X'&&b4=='X'&&b7=='X') 
+            {
+                alert(': X IS WINNER :')
+                location.reload()
+            }
+            if (b1=='X'&&b5=='X'&&b9=='X') 
+            {
+                alert(': X IS WINNER :')
+                location.reload()
+            }
+            
+
+            if (b1=='O'&&b4=='O'&&b7=='O') 
+            {
+                alert(': O IS WINNER :')
+                location.reload()
+            }
+            if (b1=='O'&&b5=='O'&&b9=='O') 
+            {
+                alert(': O IS WINNER :')
+                location.reload()
+            }
+            if (b1=='O'&&b2=='O'&&b3=='O') 
+            {
+                alert(': O IS WINNER :')
+                location.reload()
+            }
+
+
+
+
+            if (b2=='X'&&b5=='X'&&b8=='X') 
+            {
+                alert(': X IS WINNER :')
+                location.reload()
+            }
+            if (b2=='O'&&b5=='O'&&b8=='O') 
+            {
+                alert(': O IS WINNER :')
+                location.reload()
+            }
+
+
+
+            if (b3=='X'&&b6=='X'&&b9=='X') 
+            {
+                alert(': X IS WINNER :')
+                location.reload()
+            }
+            if (b3=='X'&&b5=='X'&&b7=='X') 
+            {
+                alert(': X IS WINNER :')
+                location.reload()
+            }
+            if (b3=='O'&&b6=='O'&&b9=='O') 
+            {
+                alert(': O IS WINNER :')
+                location.reload()
+            }
+            if (b3=='O'&&b5=='O'&&b7=='O') 
+            {
+                alert(': O IS WINNER :')
+                location.reload()
+            }
+
+
+
+            if (b3=='X'&&b6=='X'&&b9=='X') 
+            {
+                alert(': X IS WINNER :')
+                location.reload()
+            }
+            if (b3=='X'&&b5=='X'&&b7=='X') 
+            {
+                alert(': X IS WINNER :')
+                location.reload()
+            }
+            if (b3=='O'&&b6=='O'&&b9=='O') 
+            {
+                alert(': O IS WINNER :')
+                location.reload()
+            }
+            if (b3=='O'&&b5=='O'&&b7=='O') 
+            {
+                alert(': O IS WINNER :')
+                location.reload()
+            }
+
+
+            if (b4=='X'&&b5=='X'&&b6=='X') 
+            {
+                alert(': X IS WINNER :')
+                location.reload()
+            }
+            if (b4=='O'&&b5=='O'&&b6=='O') 
+            {
+                alert(': O IS WINNER :')
+                location.reload()
+            }
+
+
+
+            if (b7=='X'&&b8=='X'&&b9=='X') 
+            {
+                alert(': X IS WINNER :')
+                location.reload()
+            }
+            if (b7=='O'&&b8=='O'&&b9=='O') 
+            {
+                alert(': O IS WINNER :')
+                location.reload()
+            }
+        }
+    </script>
+</body>
+</html>

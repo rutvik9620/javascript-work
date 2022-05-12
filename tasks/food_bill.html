@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESTAURANT</title>
+    <style>
+        body {
+            margin: 0;
+            user-select: none;
+        }
+
+
+        .name {
+            text-align: center;
+            background-color: lightgray;
+            color: aliceblue;
+            margin: 0;
+        }
+        .name img {
+            padding: 12px;
+            margin: 0;
+        }
+
+
+        .head {
+            text-align: center;
+        }
+
+
+        .sub {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 30px 0;
+        }
+
+
+        .item {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid rgb(188, 187, 187);
+            box-shadow: 0 0 20px lightgrey;
+            transition: .5s;
+        }
+        .item img {
+            width: 300px;
+            height: 300px;
+        }
+        .item:hover{
+            transform: scale(1.1);
+        }
+
+
+        
+        .details {
+            text-align: center;
+        }
+        .details h4 {
+            font-size: 24px;
+            margin: 8px;
+            color: black;
+        }
+        .details lighter {
+            font-size: 15px;
+            color: grey;
+            margin: 8px;
+        }
+        .details p {
+            font-size: 24px;
+            margin: 25px 8px;
+            color: orangered;
+        }
+
+
+
+        .cb {
+            width: 20px;
+            height: 20px;
+            border-color: red;
+        }
+        label {
+            font-size: 20px;
+            padding: 4px 0;
+            display: block;
+        }
+        .check{
+            border: 2px solid lightgray;
+            margin: 5px 10px;
+        }
+
+
+
+        .total {
+            margin: 30px;
+        }
+        .total label {
+            font-size: 30px;
+        }
+        .total input {
+            height: 30px;
+            font-size: 20px;
+            padding: 0 10px;
+        }
+
+
+        .final {
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            background-color: orangered;
+            /* position: sticky; */
+            /* bottom: 0; */
+        }
+        .final label {
+            font-size: 30px;
+            color: aliceblue;
+        }
+        .final input {
+            height: 40px;
+            width: 100px;
+            background-color: aliceblue;
+            margin: 6px;
+            border: 0;
+            border-radius: 5px;
+            font-size: 25px;
+            padding: 0 10px;
+        }
+        .bill{
+            display: flex;
+            justify-content: space-around;
+            background-color: lightgray;
+            justify-content: center;
+            align-items: center;
+            /* position: sticky; */
+            /* bottom: 14.5%; */
+        }
+        .btn{
+            border: 0;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: orangered;
+            color: aliceblue;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="name">
+            <img src="image/logo.png" alt="logo">
+        </div>
+        <div class="head">
+            <h1>FEATURED PRODUCTS</h1>
+        </div>
+        <div class="menu">
+            <div class="sub">
+                <div class="item">
+                    <img src="image/banana.jpg" alt="">
+                    <div class="details">
+                        <h4>Oranges</h4>
+                        <lighter>Fruits</lighter>
+                        <p>PRICE : 200</p>
+                        <div class="check">
+                            <input type="checkbox" name="cb1" value="200" id="cb1" class="cb" onclick="cb1()">
+                            <label for="">Order</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="image/apple.jpg" alt="">
+                    <div class="details">
+                        <h4>Apple</h4>
+                        <lighter>Fruits</lighter>
+                        <p>PRICE : 300</p>
+                        <div class="check">
+                            <input type="checkbox" name="cb2" value="300" id="cb2" class="cb" onclick="cb2()">
+                            <label for="">Order</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="image/strawberry.jpg" alt="">
+                    <div class="details">
+                        <h4>Strawberry</h4>
+                        <lighter>Fruits</lighter>
+                        <p>PRICE : 500</p>
+                        <div class="check">
+                            <input type="checkbox" name="cb3" value="500" id="cb3" class="cb" onclick="cb3()">
+                            <label for="">Order</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="image/pumpkin.jpg" alt="">
+                    <div class="details">
+                        <h4>Pumpkin</h4>
+                        <lighter>Fruits</lighter>
+                        <p>PRICE : 150</p>
+                        <div class="check">
+                            <input type="checkbox" name="cb4" value="150" id="cb4" class="cb" onclick="cb4()">
+                            <label for="">Order</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="sub">
+                <div class="item">
+                    <img src="image/peach.jpg" alt="">
+                    <div class="details">
+                        <h4>Orange Peaches</h4>
+                        <lighter>Fruits</lighter>
+                        <p>PRICE : 250</p>
+                        <div class="check">
+                            <input type="checkbox" name="cb5" value="250" id="cb5" class="cb" onclick="cb5()">
+                            <label for="">Order</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="image/tameto.jpg" alt="">
+                    <div class="details">
+                        <h4>Tametos</h4>
+                        <lighter>Fruits</lighter>
+                        <p>PRICE : 100</p>
+                        <div class="check">
+                            <input type="checkbox" name="cb6" value="100" id="cb6" class="cb" onclick="cb6()">
+                            <label for="">Order</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="image/orange.jpg" alt="">
+                    <div class="details">
+                        <h4>Orange</h4>
+                        <lighter>Fruits</lighter>
+                        <p>PRICE : 200</p>
+                        <div class="check">
+                            <input type="checkbox" name="cb7" value="200" id="cb7" class="cb" onclick="cb7()">
+                            <label for="">Order</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="image/brokoli.jpg" alt="">
+                    <div class="details">
+                        <h4>Brokoli</h4>
+                        <lighter>Fruits</lighter>
+                        <p>PRICE : 350</p>
+                        <div class="check">
+                            <input type="checkbox" name="cb8" value="350" id="cb8" class="cb" onclick="cb8()">
+                            <label for="">Order</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--------------------- bill ---------------------->
+
+        <div class="bill">
+            <div class="total">
+                <label for="">Total Amount : </label>
+                <input type="text" id="total" placeholder="0" disabled>
+            </div>
+            <div class="submit">
+                <input type="button" value="SUBMIT" id="submit" class="btn" onclick="submit()">
+            </div>
+        </div>
+        <div class="final">
+            <label for="">BILL : </label>
+            <input type="text" id="bill" disabled>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        sum = 0;
+        function get() {
+            cbox1 = document.getElementById('cb1').value
+            cbox2 = document.getElementById('cb2').value
+            cbox3 = document.getElementById('cb3').value
+            cbox4 = document.getElementById('cb4').value
+            cbox5 = document.getElementById('cb5').value
+            cbox6 = document.getElementById('cb6').value
+            cbox7 = document.getElementById('cb7').value
+            cbox8 = document.getElementById('cb8').value
+
+            cbo1=document.getElementById('cb1')
+            cbo2=document.getElementById('cb2')
+            cbo3=document.getElementById('cb3')
+            cbo4=document.getElementById('cb4')
+            cbo5=document.getElementById('cb5')
+            cbo6=document.getElementById('cb6')
+            cbo7=document.getElementById('cb7')
+            cbo8=document.getElementById('cb8')
+        }
+
+        function cb1() {
+            get()
+            if(cbo1.checked==true)
+            {
+                // alert('hello')
+                sum = parseInt(sum) + parseInt(cbox1)
+                document.getElementById('total').value = sum
+            }
+            else
+            {
+                sum = parseInt(sum) - parseInt(cbox1)
+                document.getElementById('total').value = sum
+            }
+        }
+        function cb2() {
+            get()
+            if(cbo2.checked==true)
+            {
+                sum = parseInt(sum) + parseInt(cbox2)
+                document.getElementById('total').value = sum
+            }
+            else
+            {
+                sum = parseInt(sum) - parseInt(cbox2)
+                document.getElementById('total').value = sum
+            }
+        }
+        function cb3() {
+            get()
+            if(cbo3.checked==true)
+            {
+                sum = parseInt(sum) + parseInt(cbox3)
+                document.getElementById('total').value = sum
+            }
+            else
+            {
+                sum = parseInt(sum) - parseInt(cbox3)
+                document.getElementById('total').value = sum
+            }
+        }
+        function cb4() {
+            get()
+            if(cbo4.checked==true)
+            {
+                sum = parseInt(sum) + parseInt(cbox4)
+                document.getElementById('total').value = sum
+            }
+            else
+            {
+                sum = parseInt(sum) - parseInt(cbox4)
+                document.getElementById('total').value = sum
+            }
+        }
+        function cb5() {
+            get()
+            if(cbo5.checked==true)
+            {
+                sum = parseInt(sum) + parseInt(cbox5)
+                document.getElementById('total').value = sum
+            }
+            else
+            {
+                sum = parseInt(sum) - parseInt(cbox5)
+                document.getElementById('total').value = sum
+            }
+        }
+        function cb6() {
+            get()
+            if(cbo6.checked==true)
+            {
+                sum = parseInt(sum) + parseInt(cbox6)
+                document.getElementById('total').value = sum
+            }
+            else
+            {
+                sum = parseInt(sum) - parseInt(cbox6)
+                document.getElementById('total').value = sum
+            }
+        }
+        function cb7() {
+            get()
+            if(cbo7.checked==true)
+            {
+                sum = parseInt(sum) + parseInt(cbox7)
+                document.getElementById('total').value = sum
+            }
+            else
+            {
+                sum = parseInt(sum) - parseInt(cbox7)
+                document.getElementById('total').value = sum
+            }
+        }
+        function cb8() {
+            get()
+            if(cbo8.checked==true)
+            {
+                sum = parseInt(sum) + parseInt(cbox8)
+                document.getElementById('total').value = sum
+            }
+            else
+            {
+                sum = parseInt(sum) - parseInt(cbox8)
+                document.getElementById('total').value = sum
+            }
+        }
+
+
+
+        function submit()
+        {
+            gst=parseInt(sum)*8/100;
+            bill=parseInt(sum)+parseInt(gst)
+            document.getElementById('bill').value = bill
+        }
+
+    </script>
+</body>
+
+</html>

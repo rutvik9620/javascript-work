@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUZZLE</title>
+    <style>
+        body{
+            background-image: url(image/px1-2.jpg);
+            background-size: cover;
+            background-repeat: repeat;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .line {
+            display: flex;
+            align-items: center;
+            ;
+        }
+
+        .sub {
+            background-color: navy;
+            padding: 7px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px black;
+        }
+
+        body {
+            margin: 0;
+            /* background-image: linear-gradient(rgb(247, 247, 247),rgb(93, 91, 91)); */
+            background-color: lightblue;
+        }
+
+        .btn {
+            color: navy;
+            background-color: lightblue;
+            border: 0;
+            height: 80px;
+            width: 80px;
+            margin: 3px;
+            margin-bottom: 5px;
+            font-size: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .extra-btn {
+            color: aliceblue;
+            background-color: navy;
+            border: 0;
+            height: 80px;
+            width: 80px;
+            margin: 1px;
+            margin-bottom: 5px;
+            font-size: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .restart {
+            color: white;
+            background-color: crimson;
+            border: 0;
+            height: 60px;
+            border-radius: 30px;
+            width: 120px;
+            margin: 20px 0;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="sub">
+            <div class="line">
+                <input type="button" value="5" id="btn1" class="btn" onclick="move1()">
+                <input type="button" value="1" id="btn2" class="btn" onclick="move2()">
+                <input type="button" value="8" id="btn3" class="btn" onclick="move3()">
+            </div>
+            <div class="line">
+                <input type="button" value="2" id="btn4" class="btn" onclick="move4()">
+                <input type="button" value="6" id="btn5" class="btn" onclick="move5()">
+                <input type="button" value="7" id="btn6" class="btn" onclick="move6()">
+            </div>
+            <div class="line">
+                <input type="button" value="3" id="btn7" class="btn" onclick="move7()">
+                <input type="button" value="4" id="btn8" class="btn" onclick="move8()">
+                <input type="button" value="" id="btn9" class="extra-btn" onclick="move9()">
+            </div>
+        </div>
+        <div class="line">
+            <input type="button" value="Restart" id="btn10" class="restart" onclick="move()">
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+
+        function get() {
+            b1 = document.getElementById('btn1').value
+            b2 = document.getElementById('btn2').value
+            b3 = document.getElementById('btn3').value
+            b4 = document.getElementById('btn4').value
+            b5 = document.getElementById('btn5').value
+            b6 = document.getElementById('btn6').value
+            b7 = document.getElementById('btn7').value
+            b8 = document.getElementById('btn8').value
+            b9 = document.getElementById('btn9').value
+        }
+        function move1() {
+            get()
+            if(b2=='')
+            {
+                document.getElementById('btn1').disable = 'true'
+                document.getElementById('btn1').value = ''
+                document.getElementById('btn1').style.backgroundColor = 'navy'
+                document.getElementById('btn2').disable = 'false'
+                document.getElementById('btn2').value = b1
+                document.getElementById('btn2').style.backgroundColor = 'lightblue'
+                document.getElementById('btn2').style.color = 'navy'
+            }
+            else if(b4=='')
+            {
+                document.getElementById('btn1').disable = 'true'
+                document.getElementById('btn1').value = ''
+                document.getElementById('btn1').style.backgroundColor = 'navy'
+                document.getElementById('btn4').disable = 'false'
+                document.getElementById('btn4').value = b1
+                document.getElementById('btn4').style.backgroundColor = 'lightblue'
+                document.getElementById('btn4').style.color = 'navy'
+            }
+        }
+
+
+
+
+        function move2() {
+            get()
+            if(b1=='')
+            {
+                document.getElementById('btn2').disable = 'true'
+                document.getElementById('btn2').value = ''
+                document.getElementById('btn2').style.backgroundColor = 'navy'
+                document.getElementById('btn1').disable = 'false'
+                document.getElementById('btn1').value = b2
+                document.getElementById('btn1').style.backgroundColor = 'lightblue'
+                document.getElementById('btn1').style.color = 'navy'
+            }
+            else if(b3=='')
+            {
+                document.getElementById('btn2').disable = 'true'
+                document.getElementById('btn2').value = ''
+                document.getElementById('btn2').style.backgroundColor = 'navy'
+                document.getElementById('btn3').disable = 'false'
+                document.getElementById('btn3').value = b2
+                document.getElementById('btn3').style.backgroundColor = 'lightblue'
+                document.getElementById('btn3').style.color = 'navy'
+            }
+            else if(b5=='')
+            {
+                document.getElementById('btn2').disable = 'true'
+                document.getElementById('btn2').value = ''
+                document.getElementById('btn2').style.backgroundColor = 'navy'
+                document.getElementById('btn5').disable = 'false'
+                document.getElementById('btn5').value = b2
+                document.getElementById('btn5').style.backgroundColor = 'lightblue'
+                document.getElementById('btn5').style.color = 'navy'
+            }
+        }
+
+
+
+
+        function move3() {
+            get()
+            if(b2=='')
+            {
+                document.getElementById('btn3').disable = 'true'
+                document.getElementById('btn3').value = ''
+                document.getElementById('btn3').style.backgroundColor = 'navy'
+                document.getElementById('btn2').disable = 'false'
+                document.getElementById('btn2').value = b3
+                document.getElementById('btn2').style.backgroundColor = 'lightblue'
+                document.getElementById('btn2').style.color = 'navy'
+            }
+            else if(b6=='')
+            {
+                document.getElementById('btn3').disable = 'true'
+                document.getElementById('btn3').value = ''
+                document.getElementById('btn3').style.backgroundColor = 'navy'
+                document.getElementById('btn6').disable = 'false'
+                document.getElementById('btn6').value = b3
+                document.getElementById('btn6').style.backgroundColor = 'lightblue'
+                document.getElementById('btn6').style.color = 'navy'
+            }
+        }
+
+
+
+        function move4() {
+            get()
+            if(b1=='')
+            {
+                document.getElementById('btn4').disable = 'true'
+                document.getElementById('btn4').value = ''
+                document.getElementById('btn4').style.backgroundColor = 'navy'
+                document.getElementById('btn1').disable = 'false'
+                document.getElementById('btn1').value = b4
+                document.getElementById('btn1').style.backgroundColor = 'lightblue'
+                document.getElementById('btn1').style.color = 'navy'
+            }
+            else if(b5=='')
+            {
+                document.getElementById('btn4').disable = 'true'
+                document.getElementById('btn4').value = ''
+                document.getElementById('btn4').style.backgroundColor = 'navy'
+                document.getElementById('btn5').disable = 'false'
+                document.getElementById('btn5').value = b4
+                document.getElementById('btn5').style.backgroundColor = 'lightblue'
+                document.getElementById('btn5').style.color = 'navy'
+            }
+            else if(b7=='')
+            {
+                document.getElementById('btn4').disable = 'true'
+                document.getElementById('btn4').value = ''
+                document.getElementById('btn4').style.backgroundColor = 'navy'
+                document.getElementById('btn7').disable = 'false'
+                document.getElementById('btn7').value = b4
+                document.getElementById('btn7').style.backgroundColor = 'lightblue'
+                document.getElementById('btn7').style.color = 'navy'
+            }
+        }
+
+
+
+        function move5() {
+            get()
+            if(b2=='')
+            {
+                document.getElementById('btn5').disable = 'true'
+                document.getElementById('btn5').value = ''
+                document.getElementById('btn5').style.backgroundColor = 'navy'
+                document.getElementById('btn2').disable = 'false'
+                document.getElementById('btn2').value = b5
+                document.getElementById('btn2').style.backgroundColor = 'lightblue'
+                document.getElementById('btn2').style.color = 'navy'
+            }
+            else if(b4=='')
+            {
+                document.getElementById('btn5').disable = 'true'
+                document.getElementById('btn5').value = ''
+                document.getElementById('btn5').style.backgroundColor = 'navy'
+                document.getElementById('btn4').disable = 'false'
+                document.getElementById('btn4').value = b5
+                document.getElementById('btn4').style.backgroundColor = 'lightblue'
+                document.getElementById('btn4').style.color = 'navy'
+            }
+            else if(b6=='')
+            {
+                document.getElementById('btn5').disable = 'true'
+                document.getElementById('btn5').value = ''
+                document.getElementById('btn5').style.backgroundColor = 'navy'
+                document.getElementById('btn6').disable = 'false'
+                document.getElementById('btn6').value = b5
+                document.getElementById('btn6').style.backgroundColor = 'lightblue'
+                document.getElementById('btn6').style.color = 'navy'
+            }
+            else if(b8=='')
+            {
+                document.getElementById('btn5').disable = 'true'
+                document.getElementById('btn5').value = ''
+                document.getElementById('btn5').style.backgroundColor = 'navy'
+                document.getElementById('btn8').disable = 'false'
+                document.getElementById('btn8').value = b5
+                document.getElementById('btn8').style.backgroundColor = 'lightblue'
+                document.getElementById('btn8').style.color = 'navy'
+            }
+        }
+
+
+
+
+        function move6() {
+            get()
+            if(b9=='')
+            {
+                document.getElementById('btn6').disable = 'true'
+                document.getElementById('btn6').value = ''
+                document.getElementById('btn6').style.backgroundColor = 'navy'
+                document.getElementById('btn9').disable = 'false'
+                document.getElementById('btn9').value = b6
+                document.getElementById('btn9').style.backgroundColor = 'lightblue'
+                document.getElementById('btn9').style.color = 'navy'
+            }
+            else if(b5=='')
+            {
+                document.getElementById('btn6').disable = 'true'
+                document.getElementById('btn6').value = ''
+                document.getElementById('btn6').style.backgroundColor = 'navy'
+                document.getElementById('btn5').disable = 'false'
+                document.getElementById('btn5').value = b6
+                document.getElementById('btn5').style.backgroundColor = 'lightblue'
+                document.getElementById('btn5').style.color = 'navy'
+            }
+            else if(b3=='')
+            {
+                document.getElementById('btn6').disable = 'true'
+                document.getElementById('btn6').value = ''
+                document.getElementById('btn6').style.backgroundColor = 'navy'
+                document.getElementById('btn3').disable = 'false'
+                document.getElementById('btn3').value = b6
+                document.getElementById('btn3').style.backgroundColor = 'lightblue'
+                document.getElementById('btn3').style.color = 'navy'
+            }
+        }
+
+
+
+        function move7() {
+            get()
+            if(b4=='')
+            {
+                document.getElementById('btn7').disable = 'true'
+                document.getElementById('btn7').value = ''
+                document.getElementById('btn7').style.backgroundColor = 'navy'
+                document.getElementById('btn4').disable = 'false'
+                document.getElementById('btn4').value = b7
+                document.getElementById('btn4').style.backgroundColor = 'lightblue'
+                document.getElementById('btn4').style.color = 'navy'
+            }
+            else if(b8=='')
+            {
+                document.getElementById('btn7').disable = 'true'
+                document.getElementById('btn7').value = ''
+                document.getElementById('btn7').style.backgroundColor = 'navy'
+                document.getElementById('btn8').disable = 'false'
+                document.getElementById('btn8').value = b7
+                document.getElementById('btn8').style.backgroundColor = 'lightblue'
+                document.getElementById('btn8').style.color = 'navy'
+            }
+        }
+
+
+
+        function move8() {
+            get()
+            if(b7=='')
+            {
+                document.getElementById('btn8').disable = 'true'
+                document.getElementById('btn8').value = ''
+                document.getElementById('btn8').style.backgroundColor = 'navy'
+                document.getElementById('btn7').disable = 'false'
+                document.getElementById('btn7').value = b8
+                document.getElementById('btn7').style.backgroundColor = 'lightblue'
+                document.getElementById('btn7').style.color = 'navy'
+            }
+            else if(b9=='')
+            {
+                document.getElementById('btn8').disable = 'true'
+                document.getElementById('btn8').value = ''
+                document.getElementById('btn8').style.backgroundColor = 'navy'
+                document.getElementById('btn9').disable = 'false'
+                document.getElementById('btn9').value = b8
+                document.getElementById('btn9').style.backgroundColor = 'lightblue'
+                document.getElementById('btn9').style.color = 'navy'
+            }
+            else if(b5=='')
+            {
+                document.getElementById('btn8').disable = 'true'
+                document.getElementById('btn8').value = ''
+                document.getElementById('btn8').style.backgroundColor = 'navy'
+                document.getElementById('btn5').disable = 'false'
+                document.getElementById('btn5').value = b8
+                document.getElementById('btn5').style.backgroundColor = 'lightblue'
+                document.getElementById('btn5').style.color = 'navy'
+            }
+        }
+
+
+
+        function move9() {
+            get()
+            if(b6=='')
+            {
+                document.getElementById('btn9').disable = 'true'
+                document.getElementById('btn9').value = ''
+                document.getElementById('btn9').style.backgroundColor = 'navy'
+                document.getElementById('btn6').disable = 'false'
+                document.getElementById('btn6').value = b9
+                document.getElementById('btn6').style.backgroundColor = 'lightblue'
+                document.getElementById('btn6').style.color = 'navy'
+            }
+            else if(b8=='')
+            {
+                document.getElementById('btn9').disable = 'true'
+                document.getElementById('btn9').value = ''
+                document.getElementById('btn9').style.backgroundColor = 'navy'
+                document.getElementById('btn8').disable = 'false'
+                document.getElementById('btn8').value = b9
+                document.getElementById('btn8').style.backgroundColor = 'lightblue'
+                document.getElementById('btn8').style.color = 'navy'
+            }
+        }
+    </script>
+</body>
+
+</html>
